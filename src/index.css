@@ -1,0 +1,45 @@
+/* src/index.css */
+
+@import url("https://unpkg.com/@tailwindcss/typography@0.2.x/dist/typography.min.css");
+@import url("https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
+
+.navbar-brand {
+  font-size: 5rem !important;
+}
+
+.cursive {
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+  font-size: 5rem;
+}
+
+.prose img {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+}
+
+#navigation-nav {
+  margin-left: 10rem;
+  margin-right: 10rem;
+  font-size: 1.5rem;
+}
+.navbar-nav {
+  font-size: 1.5rem;
+}
+.card {
+  width: 35rem;
+  height: 14rem;
+}
+.secondcard {
+  width: 800vw;
+}
+.allpostsimage {
+  object-fit: cover;
+  height: 50vw;
+}
+.sectiontwoimage {
+  height: 45vh;
+  width: 25vw;
+}
