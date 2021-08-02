@@ -5,7 +5,7 @@ import sanityClient from "./client.js";
 import React, { useEffect, useState } from "react";
 
 export default function CardSection() {
-  const [allPostsData, setAllPosts] = useState([]);
+  const [otherBlogs, setOtherBlogs] = useState([]);
 
   useEffect(() => {
     sanityClient
@@ -24,62 +24,17 @@ export default function CardSection() {
       )
       .then((data) => {
         const otherBlogs = data.slice(0, data.length - 1);
-        setAllPosts(otherBlogs);
+        setOtherBlogs(otherBlogs);
       })
       .catch(console.error);
   }, []);
   return (
     <div>
-      {allPostsData.length > 0 &&
-        allPostsData.map((post, index) => (
-          <div key={index} class="flex-2">
-            <div class="card mb-3">
+      {otherBlogs.length > 0 &&
+        otherBlogs.map((post, index) => (
+          <div key={index} class="flex-2 kalam ">
+            <div class="card mb-3 kalam">
               <Link to={"/" + post.slug.current}>
-                <div class="card-body">
-                  <h5 class="card-title">{post.title}</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                  <p class="card-text">{post.body}</p>
-                  <a href="#" class="card-link">
-                    Card link
-                  </a>
-                  <a href="#" class="card-link">
-                    Another link
-                  </a>
-                </div>
-              </Link>
-            </div>
-            <div class="card mb-3">
-              <Link to={"/" + post.slug.current} key={post.slug.current}>
-                <div class="card-body">
-                  <h5 class="card-title">{post.title}</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                  <p class="card-text">{post.body}</p>
-                  <a href="#" class="card-link">
-                    Card link
-                  </a>
-                  <a href="#" class="card-link">
-                    Another link
-                  </a>
-                </div>
-              </Link>
-            </div>
-            <div class="card mb-3">
-              <Link to={"/" + post.slug.current} key={post.slug.current}>
-                <div class="card-body">
-                  <h5 class="card-title">{post.title}</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                  <p class="card-text">{post.body}</p>
-                  <a href="#" class="card-link">
-                    Card link
-                  </a>
-                  <a href="#" class="card-link">
-                    Another link
-                  </a>
-                </div>
-              </Link>
-            </div>
-            <div class="card mb-3">
-              <Link to={"/" + post.slug.current} key={post.slug.current}>
                 <div class="card-body">
                   <h5 class="card-title">{post.title}</h5>
                   <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>

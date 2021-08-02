@@ -13,7 +13,32 @@
   font-weight: 700;
   font-size: 5rem;
 }
-
+.kalam{
+  font-family: "priori-sans, sans-serif";
+  font-size: 2rem;
+}
+.italics{
+  color: pink;
+  font-size:1.5rem;
+  font-family: "sans-serif";
+}
+.sans{
+  font-size: 1.5rem;
+  font-family: "sans-serif";
+}
+.sans2{
+  font-size: 1.5rem;
+  font-family: "Allan";
+}
+.black{
+  color: white;
+  background-color: black;
+}
+.contentcard{
+  font-size:2rem;
+  font-family: "priori-sans, sans-serif";
+  background-color: rgba(165, 137, 137, 0.199);
+}
 .prose img {
   margin-left: auto;
   margin-right: auto;
@@ -42,4 +67,17 @@
 .sectiontwoimage {
   height: 45vh;
   width: 25vw;
+}
+.center{
+  text-align: center;
+}
+.imagecard p{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.btn{
+  place-items: center;
 }

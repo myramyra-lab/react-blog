@@ -9,6 +9,13 @@ import Navigation from "./Navigation.js";
 import SectionOne from "./Section1";
 import SectionTwo from "./Section2";
 import SecondNavigation from "./Navigation2.js";
+import Sideimages from "./Sideimages.js";
+import MostLoved from "./MostLoved.js";
+import Carousel from "./Carousel.js";
+import ContentCard from './ContentCard';
+import ThreeImages from "./ThreeImages.js";
+import Bottom from "./Bottom";
+import Footer from './Footer';
 
 export default function AllPosts() {
   const [allPostsData, setAllPosts] = useState(null);
@@ -65,6 +72,31 @@ export default function AllPosts() {
           <br></br>
           <SectionTwo />
         </div>
+        <div class = "flex-2">
+          <Sideimages />
+        </div>
+      </div>
+      <div>
+        <MostLoved/>
+      </div>
+      <div>
+        <Carousel/>
+      </div>
+      <br /><br />
+      <div>
+        <ContentCard/>
+      </div>
+      <br /><br />
+      <div>
+        <ThreeImages/>
+      </div>
+      <br /><br />
+      <div>
+        <Bottom/>
+      </div>
+      <br /><br />
+      <div>
+        <Footer/>
       </div>
     </div>
   );
