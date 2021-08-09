@@ -31,8 +31,6 @@ export default function Carousel() {
     }, []);
     return (
       <div>
-        {allPostsData.length > 0 &&
-          allPostsData.map((post, index) => (
             <div
               id="carouselExampleControls"
               class="carousel slide"
@@ -40,7 +38,9 @@ export default function Carousel() {
             >
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <div class="flex">
+              <div class="flex">
+                {allPostsData.length > 0 &&
+                  allPostsData.map((post, index) => (
                     <img
                       src={post.mainImage.asset.url}
                       class="d-block w-25 h-25"
@@ -61,56 +61,10 @@ export default function Carousel() {
                       class="d-block w-25 h-25"
                       alt="..."
                     />
+                  ))}
                   </div>
                 </div>
-                <div class="carousel-item">
-                  <div class="">
-                    <img
-                      src={post.mainImage.asset.url}
-                      class="d-block w-25 h-25"
-                      alt="..."
-                    />
-                    <img
-                      src={post.mainImage.asset.url}
-                      class="d-block w-25 h-25"
-                      alt="..."
-                    />
-                    <img
-                      src={post.mainImage.asset.url}
-                      class="d-block w-25 h-25"
-                      alt="..."
-                    />
-                    <img
-                      src={post.mainImage.asset.url}
-                      class="d-block w-25 h-25"
-                      alt="..."
-                    />
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div className="">
-                    <img
-                      src={post.mainImage.asset.url}
-                      class="d-block w-25 h-25"
-                      alt="..."
-                    />
-                    <img
-                      src={post.mainImage.asset.url}
-                      class="d-block w-25 h-25"
-                      alt="..."
-                    />
-                    <img
-                      src={post.mainImage.asset.url}
-                      class="d-block w-25 h-25"
-                      alt="..."
-                    />
-                    <img
-                      src={post.mainImage.asset.url}
-                      class="d-block w-25 h-25"
-                      alt="..."
-                    />
-                  </div>
-                </div>
+                
               </div>
               <button
                 class="carousel-control-prev"
@@ -136,8 +90,7 @@ export default function Carousel() {
                 ></span>
                 <span class="visually-hidden">Next</span>
               </button>
-            </div>
-          ))}
+      </div>
       </div>
     );
 }

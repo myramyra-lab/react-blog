@@ -57,54 +57,8 @@ export default function SectionTwo() {
                 </div>
               </Link>
             </div>
-            <div class="secondcard mb-3">
-              <Link to={"/" + post.slug.current} key={post.slug.current}>
-                <div className="flex space-x-10">
-                  <span className="flex-2 h-300rem rounded bg-white">
-                    <img
-                      className=" rounded-r sectiontwoimage"
-                      src={post.mainImage.asset.url}
-                      alt=""
-                    />
-                  </span>
-                  <div class="flex-2">
-                    <h5 class="card-title">{post.title}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">{post.body}</p>
-                    <a href="#" class="card-link">
-                      Card link
-                    </a>
-                    <a href="#" class="card-link">
-                      Another link
-                    </a>
-                  </div>
-                </div>
-              </Link>
-            </div>
-            <div class="secondcard mb-3">
-              <Link to={"/" + post.slug.current} key={post.slug.current}>
-                <div className="flex space-x-10">
-                  <span className="flex-2 h-300rem rounded bg-white">
-                    <img
-                      className="rounded-r sectiontwoimage"
-                      src={post.mainImage.asset.url}
-                      alt=""
-                    />
-                  </span>
-                  <div class="flex-2">
-                    <h5 class="card-title">{post.title}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">{post.body}</p>
-                    <a href="#" class="card-link">
-                      Card link
-                    </a>
-                    <a href="#" class="card-link">
-                      Another link
-                    </a>
-                  </div>
-                </div>
-              </Link>
-            </div>
+            
+          
           </div>
         ))}
       ;
